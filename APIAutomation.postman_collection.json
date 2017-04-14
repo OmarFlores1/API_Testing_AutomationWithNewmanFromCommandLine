@@ -1,0 +1,55 @@
+{
+	"id": "01319b2a-9f2f-dc54-f29e-627dd2bde296",
+	"name": "APIAutomation",
+	"description": "",
+	"order": [
+		"f523dc7f-8a1e-8056-91d9-067acd9f967b",
+		"8a249cf3-5896-552b-d1f3-88e1993e1975"
+	],
+	"folders": [],
+	"timestamp": 1491950012527,
+	"owner": "278365",
+	"public": false,
+	"requests": [
+		{
+			"id": "8a249cf3-5896-552b-d1f3-88e1993e1975",
+			"headers": "",
+			"url": "http://www.quandl.com/api/v1/datasets/FRED/GDP.json",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "01319b2a-9f2f-dc54-f29e-627dd2bde296",
+			"data": null,
+			"dataMode": "params",
+			"name": "3 assertions: http://www.quandl.com/api/v1/datasets/FRED/GDP.json",
+			"description": "additional assertion: checkForString",
+			"descriptionFormat": "html",
+			"time": 1492184621873,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\r\n\r\ntests[\"Response time is less than 2000ms\"] = responseTime < 2000;\r\n\r\ntests[\"Body matches string\"] = responseBody.has(\"Gross Domestic Product\");\r\n",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "f523dc7f-8a1e-8056-91d9-067acd9f967b",
+			"headers": "",
+			"url": "http://www.quandl.com/api/v1/datasets/FRED/GDP.json",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "01319b2a-9f2f-dc54-f29e-627dd2bde296",
+			"data": null,
+			"dataMode": "params",
+			"name": "2 assertions: http://www.quandl.com/api/v1/datasets/FRED/GDP.json",
+			"description": "2 assertions",
+			"descriptionFormat": "html",
+			"time": 1491950701308,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\r\n\r\ntests[\"Response time is less than 2000ms\"] = responseTime < 2000;",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
